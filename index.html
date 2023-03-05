@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Pokemon Party</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="emptyJar">
+            <!-- <div class="playmusic"><h1>▶</h1></div> -->
+            <h2 class="reddot">•</h2><br>
+
+            <!-- HOW MANY POKEMON ===============+========================================= HOW MANY POKEMON -->
+
+            <button onclick="fillJar();btnremove(this);play1()" id="game1" class="dnone startbutton">
+                <img src="./gamecover1.png" alt="gamecover1"><br>
+                Start Game!
+            </button>
+            
+            <audio id="countmusic" src="./countmusic.mp3"></audio>
+
+            <form name="howmanymon" id="howmany" autocomplete="off" onsubmit="pokecheck();return false">
+                <h3>How many did you count?</h3>
+
+                <div class="pokecount">
+                    <label for="saur">Bulbasaur</label>
+                    <input type="text" name="saur" id="saur">
+                </div><br>
+                <div class="pokecount">
+                    <label for="mander">Charmander</label>
+                    <input type="text" name="mander" id="mander">
+                </div><br>
+                <div class="pokecount">
+                    <label for="tle">Squirtle</label>
+                    <input type="text" name="tle" id="tle">
+                </div><br>
+                <div class="pokecount">
+                    <label for="achu">Pikachu</label>
+                    <input type="text" name="achu" id="achu">
+                </div><br>
+                <button type="submit" id="game1submit">Check the count!</button>
+                <br><br>
+            </form>
+
+            <div id="results">
+                <h3>RESULTS</h3>
+                <br><br>
+
+                <div class="resultscount">
+                    <p>Bulbasaurs:</p>
+                    <p id="b001">--</p>
+                </div>
+                <div class="resultscount">
+                    <p>Your answer:</p>
+                    <p id="userb001">--</p>
+                </div><br>
+                <p id="result001">--</p><br>
+
+                <div class="resultscount">
+                    <p>Charmanders:</p>
+                    <p id="c004">--</p>
+                </div>
+                <div class="resultscount">
+                    <p>Your answer:</p>
+                    <p id="userc004">--</p>
+                </div><br>
+                <p id="result004">--</p><br>
+
+                <div class="resultscount">
+                    <p>Squirtles:</p>
+                    <p id="s007">--</p>
+                </div>
+                <div class="resultscount">
+                    <p>Your answer:</p>
+                    <p id="users007">--</p>
+                </div><br>
+                <p id="result007">--</p><br>
+                
+                <div class="resultscount">
+                    <p>Pikachus:</p>
+                    <p id="p025">--</p>
+                </div>
+                <div class="resultscount">
+                    <p>Your answer:</p>
+                    <p id="userp025">--</p>
+                </div><br>
+                <p id="result025">--</p>
+                <br>
+
+                <button id="restart" onclick="window.location.reload();fillJar()"> Restart </button><br><br>
+            </div>
+
+            <!-- HOW MANY POKEMON ======================================================== HOW MANY POKEMON -->
+
+            <!-- CHARGE IT ================================================ -->
+
+            <button onclick="fillJar2();btnremove(this);play2()" id="game2" class="dnone startbutton">
+                <img src="./gamecover2.png" alt="gamecover2"><br>
+                Start Game!
+                </button>
+
+            <audio id="chargemusic" src="./chargemusic.mp3"></audio>
+
+            <div class="electabuzz">
+                <img src="./electabuzz.gif" id="elightning" alt="e125" onclick="chargeIt()">
+                <p><span id="numToWin">--</span> clicks needed!</p>
+            </div>
+            <div id="citylight" class="cities">
+                <img src="./citylights.gif" alt="lightson">
+                <p>You Win!</p>
+                <p>The city has power!</p><br>
+                <button class="game3restart" onclick="document.location.reload(true)"> Restart </button>
+            </div>
+            <div id="citydark" class="cities">
+                <img src="./citydark.jpg" alt="lightsoff">
+                <p>The city has no power, you lose.</p><br>
+                <button class="game3restart" onclick="document.location.reload(true)"> Restart </button>
+            </div>
+            <div id="cityfire" class="cities">
+                <img src="./cityfire.jpg" alt="lightsfire">
+                <p>The city is on fire from a power surge, you lose.</p><br>
+                <button class="game3restart" onclick="document.location.reload(true)"> Restart </button>
+            </div>
+
+            <!-- CHARGE IT ================================================ -->
+
+            <!-- ============= FIRE WATER GRASS ==============================================   -->
+
+            <button onclick="fillJar3();btnremove(this)" id="game3" class="dnone startbutton">
+                <img src="./gamecover3.jpg" alt="gamecover3"><br>
+                Start Game!
+                </button>   
+        
+            <div id="fwg">
+
+                <div class="selecttype">
+                    <p>Select a type:</p>
+                    <div class="types">
+                        <img src="./firep.png" alt="fire" onclick="chosefire()">
+                        <img src="./waterp.png" alt="water" onclick="chosewater()">
+                        <img src="./grassp.png" alt="grass" onclick="chosegrass()">
+                    </div>
+                </div>
+
+                <div class="fwgresultpage">
+                    <p class="oppo">Opponent chose: <span id="opptype">--</span></p>
+                    <p id="fwgresult">--</p>
+                    <p id="fwgresult2">--</p>
+                    <p class="playchoice">You chose: <span id="playtype">--</span></p>
+
+                    <button id="fwgrestart" onclick="document.location.reload(true)">Restart</button>
+
+                </div>
+            </div>
+
+            <!-- ============= FIRE WATER GRASS ==============================================   -->
+
+            <!-- ============================ FIND HAUNTER ======================== -->
+
+            <button onclick="fillJar4();btnremove(this);play4()" id="game4" class="dnone startbutton">
+                <img src="./gamecover4.png" alt="gamecover4"><br>
+                Start Game!
+            </button>
+            
+            <audio id="hauntermusic" src="hauntermusic.mp3"></audio>
+
+            <div class="findhaunter">
+                <div id="building">
+                    <div class="floor" id="f1">
+                        <img src="./closeddoor.png" alt="closeddoor" data-door="c01" class="rooms" id="c01"
+                            onclick="opensesame(id)">
+                        <img src="./closeddoor.png" alt="closeddoor" data-door="c02" class="rooms" id="c02"
+                            onclick="opensesame(id)">
+                        <img src="./closeddoor.png" alt="closeddoor" data-door="c03" class="rooms" id="c03"
+                            onclick="opensesame(id)">
+                    </div>
+                    <div class="floor" id="f2">
+                        <img src="./closeddoor.png" alt="closeddoor" data-door="c04" class="rooms" id="c04"
+                            onclick="opensesame(id)">
+                        <img src="./closeddoor.png" alt="closeddoor" data-door="c05" class="rooms" id="c05"
+                            onclick="opensesame(id)">
+                        <img src="./closeddoor.png" alt="closeddoor" data-door="c06" class="rooms" id="c06"
+                            onclick="opensesame(id)">
+                    </div>
+                    <div class="floor" id="f3">
+                        <img src="./closeddoor.png" alt="closeddoor" data-door="c07" class="rooms" id="c07"
+                            onclick="opensesame(id)">
+                        <img src="./closeddoor.png" alt="closeddoor" data-door="c08" class="rooms" id="c08"
+                            onclick="opensesame(id)">
+                        <img src="./closeddoor.png" alt="closeddoor" data-door="c09" class="rooms" id="c09"
+                            onclick="opensesame(id)">
+                    </div>
+                    <div class="floor" id="f4">
+                        <img src="./closeddoor.png" alt="closeddoor" data-door="c10" class="rooms" id="c10"
+                            onclick="opensesame(id)">
+                        <img src="./closeddoor.png" alt="closeddoor" data-door="c11" class="rooms" id="c11"
+                            onclick="opensesame(id)">
+                        <img src="./closeddoor.png" alt="closeddoor" data-door="c12" class="rooms" id="c12"
+                            onclick="opensesame(id)">
+                    </div>
+
+                </div>
+                <div id="game4end">
+                    <img src="./haunter.gif" alt="haunter">
+                    <p>You found Haunter!</p>
+                    <button class="restartd" id="restartdid" onclick="document.location.reload(true)">Restart</button>
+                </div>
+
+                <div id="overlay">
+                    <img src="./haunterwins.gif"><br><br>
+                    <p>You Lose!</p><br>
+                    <button class="restartd" onclick="document.location.reload(true)">Restart</button>
+                </div>
+
+            </div>
+
+            <!-- ======================== END OF JAR / SCREEN ===========================  -->
+
+            <div class="row">
+                <span id="jar"></span>
+            </div>
+        </div>
+
+        <!--   ================  RIGHT SIDE AND BOTTOM MENU ==========   -->
+
+        <div class="right">
+            <div class="navbar">
+                <div class="title">
+                    <h2>Pokémon Party</h2><br>
+                    <p>Directions: </p>
+                </div>
+                <div class="directions">
+                    <div id="rules1">
+                        <p>Professor Oak needs to know how many of each Pokémon are in the wild. Count them and report
+                            back!</p>
+                        <div id="timer1"></div>
+                    </div>
+
+                    <div id="rules2">
+                        <p>The city needs power! Help Electabuzz charge with the amount of clicks before time runs out.
+                            However, DO NOT overcharge him...</p>
+                        <div id="timer2"></div>
+                    </div>
+
+                    <div id="rules3">
+                        <p>Fire burns Grass. <br><br>Water puts out Fire. <br><br>Grass grows stronger with Water.
+                            <br><br>Choose wisely.
+                        </p>
+                        <div id="wincount"></div>
+                    </div>
+
+                    <div id="rules4">
+                        <p>It's hide and seek with Haunter, you have three chances to find them!</p>
+                        <div id="haunterguess"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="games">
+        <div class="cartridge">
+            <img src="./gamecover1.png" alt="gamecover1" onclick="startgame1()">
+        </div>
+        <div class="cartridge">
+            <img src="./gamecover2.png" alt="gamecover2" onclick="startgame2()">
+        </div>
+        <div class="cartridge">
+            <img src="./gamecover3.jpg" alt="gamecover3" onclick="startgame3()">
+        </div>
+        <div class="cartridge">
+            <img src="./gamecover4.png" alt="gamecover4" onclick="startgame4()">
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

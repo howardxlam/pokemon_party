@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("./pokebg1.jpg");
+}
+
+.reddot {
+    font-size: 30px;
+    color: red;
+    position: absolute;
+    top: 100px;
+    left: -40px;
+}
+
+div#emptyJar {
+    background-color: #9bbc0f;
+    width: 315px;
+    height: 460px;
+    padding: 10px 10px;
+    margin: 10px 20px;
+    border: rgb(130, 128, 128) solid;
+    border-width: 15px 15px 15px 50px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px 5px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+img {
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+#output {
+    border: 1px solid white;
+    width: 95%;
+    margin: auto;
+    color: black;
+}
+
+.navbar {
+    display: block;
+    text-align: center;
+    width: 250px;
+    background-color: #8bac0f;
+    margin-top: 15px;
+    border: 5px #0f380f solid;
+    color: #0f380f;
+    border-radius: 10px;
+    height: 495px;
+}
+
+.title {
+    margin: 20px 0 0 0;
+    height: 110px;
+    font-weight: bold;
+}
+
+.directions {
+    height: 290px;
+}
+
+.music {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #9bbc0f;
+    height: 75px;
+    border: 1px #0f380f solid;
+}
+
+audio {
+    height: 30px;
+    width: 250px;
+    opacity: 0.5;
+}
+
+button {
+    padding: 5px;
+    background-color: #9bbc0f;
+    color: #0f380f;
+    height: 50px;
+    cursor: pointer;
+}
+
+.startbutton {
+    padding: 10px;
+    background-color: #9bbc0f;
+    color: #0f380f;
+    height: 175px;
+    cursor: pointer;
+}
+
+#restart {
+    visibility: hidden;
+}
+
+#howmany {
+    background-color: #9bbc0f;
+    color: #0f380f;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}
+
+#howmany input {
+    background-color: #9bbc0f;
+    width: 75px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#howmany h3 {
+    padding: 15px 0px;
+}
+
+.pokecount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#results {
+    background-color: #9bbc0f;
+    color: #0f380f;
+    text-align: center;
+    padding: 10px;
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.resultscount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5em;
+    font-size: 14px;
+}
+
+
+.electabuzz {
+    display: none;
+    text-align: center;
+}
+
+.electabuzz p {
+    padding-top: 15px;
+}
+
+#elightning {
+    height: 350px;
+    width: 300px;
+    opacity: 0.6;
+}
+
+.electabuzz img {
+    width: 100%;
+    opacity: 0.3;
+}
+
+.clicksToWin {
+    display: flex;
+}
+
+.cities {
+    display: none;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.cities img {
+    width: 300px;
+    height: 300px;
+    border: 2px #0f380f solid;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.right {
+    display: block;
+}
+
+.games {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.games img {
+    width: 125px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.cartridge {
+    width: 150px;
+    height: 175px;
+    background-color: darkgray;
+    border: 1px black solid;
+    box-shadow: 2px 5px 5px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.dnone {
+    display: none;
+}
+
+.selecttype {
+    display: none;
+}
+
+.types {
+    background-color: black;
+    padding: 10px 20px 0 20px;
+    margin-top: 5px;
+}
+
+.types img {
+    width: 75px;
+}
+
+.oppo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #9bbc0f;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.playchoice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #9bbc0f;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+#fwgresult {
+    text-align: center;
+}
+
+#fwgresult2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.fwgresultpage {
+    display: none;
+}
+
+#fwgrestart {
+    width: 150px;
+    margin: 10px 75px;
+}
+
+div.floor div {
+    border: 2px black solid;
+}
+
+
+#building img {
+    cursor: pointer;
+    width: 83px;
+}
+
+#building {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    display: none;
+}
+
+.floor {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#game4end {
+    margin: 10px auto;
+    display: none;
+}
+
+#game4end img {
+    width: 300px;
+}
+
+#overlay {
+    position: absoulte;
+    display: none;
+    width: 270px;
+    height: 250px;
+    padding: 100px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #8bac0f;
+}
+
+#overlay img {
+    width: 200px;
+}
+
+#rules4 {
+    line-height: 1.5em;
+    height: 300px;
+    display: none;
+}
+
+#haunterguess {
+    color: red;
+    background-color: #0f380f;
+    padding: 5px 0;
+    margin-top: 65px;
+}
+
+#rules3 {
+    line-height: 1.2em;
+    height: 300px;
+    display: none;
+}
+
+#rules2 {
+    line-height: 1.4em;
+    height: 300px;
+    display: none;
+    padding: 0 10px;
+}
+
+#timer2 {
+    color: red;
+    background-color: #0f380f;
+    width: 100%;
+    padding: 10px 0px;
+    margin-top: 5px;
+}
+
+#rules1 {
+    line-height: 1.4em;
+    height: 250px;
+    display: none;
+    padding: 0 10px;
+}
+
+#timer1 {
+    color: red;
+    background-color: #0f380f;
+    width: 100%;
+    padding: 10px 0px;
+    margin-top: 15px;
+}
+
+#restartdid {
+    margin-left: 100px;
+    margin-top: 20px;
+}
